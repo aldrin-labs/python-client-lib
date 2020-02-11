@@ -6,7 +6,7 @@ Just copy ccai/client.py into your project and you are ready to go
 
 More examples coming soon!
 
-## How to generate api key and keyId?
+### How to generate api key and keyId?
 
 Go to your profile page: https://app.cryptocurrencies.ai/profile/api <br/>
 Click on "GENERATE API KEY" <br/>
