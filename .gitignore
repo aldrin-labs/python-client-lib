@@ -1,0 +1,6 @@
+.tox
+.cache/v/cache
+build/
+dist/
+.idea/
+__pycache__/
