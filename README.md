@@ -10,6 +10,6 @@ More examples coming soon!
 
 Go to your profile api page: https://app.cryptocurrencies.ai/profile/api <br/>
 Click on "GENERATE API KEY" <br/>
-How to copy KeyId: <br \>
-Go to your profile accounts page: https://app.cryptocurrencies.ai/profile/accounts <br \>
+How to copy KeyId: <br/>
+Go to your profile accounts page: https://app.cryptocurrencies.ai/profile/accounts <br/>
 Click on copy icon -> your key token will be copied in clipboard
