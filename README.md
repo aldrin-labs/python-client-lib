@@ -10,4 +10,4 @@ More examples coming soon!
 
 Go to your profile page: https://app.cryptocurrencies.ai/profile/api <br/>
 Click on "GENERATE API KEY" <br/>
-How to copy KeyId coming soon (in ~6h)
+How to copy KeyId coming soon (in ~6h).
