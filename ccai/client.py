@@ -90,6 +90,15 @@ class Client(object):
     except:
       print('Exception occurred')
 
+  def get_futures_free_balance(self, symbol='USDT'):
+    try:
+      data = self.get_balances()
+      symbolAsset = list(filter(lambda a: a["asset"]["symbol"] == symbol and a["assetType"] == 1, data))
+      free = symbolAsset[0].get("free", 0) if len(symbolAsset) else 0
+      return free
+    except:
+      print('Exception occurred')
+
   def _send(self, query, variables):
     data = {'query': query,
             'variables': variables}
