@@ -97,8 +97,7 @@ class Client(object):
       symbolAsset = list(filter(lambda a: a["asset"]["symbol"] == symbol and a["assetType"] == 1, data))
       free = symbolAsset[0].get("free", 0) if len(symbolAsset) else 0
       return free
-    except:
-      e = sys.exc_info()[1]
+    except Exception as e:
       print('Exception message:', e)
 
   def _send(self, query, variables):
