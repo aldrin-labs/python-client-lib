@@ -1,5 +1,6 @@
 from six.moves import urllib
 import json
+import sys
 
 class Client(object):
   API_URL = 'https://api.cryptocurrencies.ai/graphql'
@@ -97,7 +98,8 @@ class Client(object):
       free = symbolAsset[0].get("free", 0) if len(symbolAsset) else 0
       return free
     except:
-      print('Exception occurred')
+      e = sys.exc_info()[1]
+      print('Exception message:', e)
 
   def _send(self, query, variables):
     data = {'query': query,
