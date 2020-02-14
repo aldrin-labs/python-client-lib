@@ -1,6 +1,5 @@
 from six.moves import urllib
 import json
-import sys
 
 class Client(object):
   API_URL = 'https://api.cryptocurrencies.ai/graphql'
