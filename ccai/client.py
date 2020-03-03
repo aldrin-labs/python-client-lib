@@ -99,7 +99,7 @@ class Client(object):
     except Exception as e:
       print('Exception message:', e)
 
-  # returns array of smart order objects
+  # returns array of smart order objects, example: [{'_id': '5e5e06a3c543275bf7a32eba'}]
   def get_active_smart_orders(self, marketType=0):
     query = "query getActiveStrategies($input: activeStrategiesInput!) {\n getActiveStrategies(activeStrategiesInput: $input) {\n    _id\n  }\n}\n"
     query_params = {}
@@ -114,7 +114,7 @@ class Client(object):
     except Exception as e:
       print('Exception message:', e) 
 
-  # returns array of smart order ids
+  # returns array of smart order ids, example: ['5e5e06a3c543275bf7a32eba']
   def get_active_smart_orders_ids(self, marketType=0):
     try:
       smart_orders = self.get_active_smart_orders(marketType)
