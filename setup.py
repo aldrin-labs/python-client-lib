@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="ccai-client", # Replace with your own username
-    version="0.0.1b",
+    version="0.0.3",
     author="Cryptocurrencies.AI",
     author_email="support@cryptocurrencies.ai",
     description="Cryptocurrencies.AI client library for trading",
