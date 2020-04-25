@@ -61,9 +61,18 @@ class Client(object):
     }
     response = self._send(query, variables=mutation_params)
     decoded = json.loads(response)
-    if decoded["data"]["createOrder"]["status"] == "OK":
-      return decoded["data"]["createOrder"]["orderId"]
-    else:
+
+    try:
+      if (decoded["data"] != None) and (decoded["data"]["createOrder"] != None):
+        if decoded["data"]["createOrder"]["status"] == "OK":
+          return decoded["data"]["createOrder"]["orderId"]
+
+      if decoded["errors"] != None and len(decoded["errors"]) > 0:
+        if decoded["errors"][0]["message"]:
+          return "Server err message: " +  decoded["errors"][0]["message"]
+
+      return "ERR"
+    except:
       return "ERR"
 
   '''
