@@ -110,7 +110,7 @@ class Client(object):
 
   # returns array of smart order objects, example: [{'_id': '5e5e06a3c543275bf7a32eba'}]
   def get_active_smart_orders(self, marketType=0):
-    query = "query getActiveStrategies($input: activeStrategiesInput!) {\n getActiveStrategies(activeStrategiesInput: $input) {\n    _id\n  }\n}\n"
+    query = "query getActiveStrategies($input: activeStrategiesInput!) {\n getActiveStrategies(activeStrategiesInput: $input) {\n  strategies {\n  _id\n  }\n}\n}\n"
     query_params = {}
     query_params["input"] = {
       "activeExchangeKey": self.keyId,
@@ -119,7 +119,7 @@ class Client(object):
 
     try:
       response = self._send(query, variables=query_params)
-      return json.loads(response)["data"]["getActiveStrategies"]
+      return json.loads(response)["data"]["getActiveStrategies"]["strategies"]
     except Exception as e:
       print('Exception message:', e) 
 
